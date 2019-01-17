@@ -1,0 +1,17 @@
+package data;
+
+import java.util.ArrayList;
+
+import models.Supplier;
+
+public static ArrayList<Supplier> suppliers = new ArrayList<Supplier>() {
+	{
+		add(new Supplier("", "Pa$$w0rd", "SephoraDemoCompany");
+		add(new Supplier("orsi", "orsi");
+		
+	}	
+};
+
+public static void addSupplier(Supplier supplier) {
+	suppliers.add(supplier);
+}

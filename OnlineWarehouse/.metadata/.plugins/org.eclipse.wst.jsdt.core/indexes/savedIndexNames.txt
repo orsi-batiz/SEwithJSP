@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+C:\Users\Batiz\Desktop\OnlineWarehouse\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1849298788.index
+2672171704.index
+1824747151.index
+299614031.index
+546320140.index
+3521751312.index
+1881195691.index
+2672171704.index
+3328206967.index

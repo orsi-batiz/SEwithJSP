@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<jsp:include page="headerAdministrator.jsp" />
+<jsp:include page="menuAdministrator.jsp" />
+
+<c:if test="${sessionScope.products != null}">
+<c:forEach var="id" items="${sessionScope.products}" >
+            <tr>
+                <td>${id.name}</td>
+                <td>${id.company}</td>
+                <td>${id.category}</td>
+                <td>${id.price}</td>
+             </tr>
+            
+           <form action="endSaleServlet" method="post">
+             	<input type=hidden name="id" value="${id.id}"/>
+				<input type="submit" value="End sale" /></form>
+</c:forEach>			
+</c:if>
+<c:if test="${sessionScope.products == null}">
+No sales to manage at the moment.
+</c:if>
+<jsp:include page="footer.jsp" />
+</body>
+</html>

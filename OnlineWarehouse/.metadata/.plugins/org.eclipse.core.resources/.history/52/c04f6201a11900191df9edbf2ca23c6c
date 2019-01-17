@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+ 
+<div class="header-container">
+ 
+    <div class="site-name">Online Warehouse</div>
+ 
+    <div class="header-bar">
+        <c:if test="${sessionScope.customer != null}">
+        Hello
+        <% rrrr=(HttpServletRequest)session.getAttribute("req1"); %>
+           <a href="${pageContext.request.contextPath}/accountInfo.jsp">
+            </a>
+         &nbsp;|&nbsp;
+           <a href="${pageContext.request.contextPath}/logout.jsp">Logout</a>
+ 
+        </c:if>
+        <c:if test="${sessionScope.customer == null}">
+            <a href="${pageContext.request.contextPath}/login.jsp" >Login</a>
+        	<a href="${pageContext.request.contextPath}/createAccount.jsp" >Create Account</a>
+        </c:if>
+        
+    </div>
+</div>

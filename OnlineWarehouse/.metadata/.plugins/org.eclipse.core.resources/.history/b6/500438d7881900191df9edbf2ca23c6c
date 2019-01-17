@@ -1,0 +1,20 @@
+package data;
+
+import java.util.*;
+
+import models.Customer;
+
+public class Customers {
+
+	public ArrayList<Customer> customers = new ArrayList<Customer>();
+	
+	public Customers() {
+		customers.add(new Customer());
+		customers.add(new Customer());
+		customers.add(new Customer());
+	}
+	
+	public void addCustomer(Customer customer) {
+		customers.add(customer);
+	}
+}

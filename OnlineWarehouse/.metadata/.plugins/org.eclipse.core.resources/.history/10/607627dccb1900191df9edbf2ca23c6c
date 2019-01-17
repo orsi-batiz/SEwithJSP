@@ -1,0 +1,20 @@
+package data;
+
+import java.util.*;
+
+import models.Customer;
+
+public class Customers {
+
+	public static HashMap<Integer, Customer> customers = new HashMap<Integer, Customer>() {
+		{
+			put(Integer.valueOf(1), new Customer(1, "benyi", "benyi", "Andrei", "Benyi", "andreibenyi@gmail.com", "M", "1998-01-18", true));
+			put(Integer.valueOf(2), new Customer(2, "orsi", "orsi", "Orsolya", "Batiz", "orsolyabatiz@gmail.com", "F", "1997-08-02", false));
+			put(Integer.valueOf(3), new Customer(3, "vlad", "vlad", "Vlad", "Petrutiu", "vladpetrutiu@gmail.com", "M", "1998-07-01"));
+		}	
+	};
+	
+	public static void addCustomer(Customer customer) {
+		customers.add(customer);
+	}
+}

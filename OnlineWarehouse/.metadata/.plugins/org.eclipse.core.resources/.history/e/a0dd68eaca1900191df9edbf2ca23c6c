@@ -1,0 +1,20 @@
+package data;
+
+import java.util.*;
+
+import models.Customer;
+
+public class Customers {
+
+	public static ArrayList<Customer> customers = new ArrayList<Customer>() {
+		{
+			add(new Customer("benyi", "benyi", "Andrei", "Benyi", "andreibenyi@gmail.com", "M", "1998-01-18", true));
+			add(new Customer("orsi", "orsi", "Orsolya", "Batiz", "orsolyabatiz@gmail.com", "F", "1997-08-02", false));
+			add(new Customer("vlad", "vlad", "Vlad", "Petrutiu", "vladpetrutiu@gmail.com", "M", "1998-07-01"));
+		}	
+	};
+	
+	public static void addCustomer(Customer customer) {
+		customers.add(customer);
+	}
+}

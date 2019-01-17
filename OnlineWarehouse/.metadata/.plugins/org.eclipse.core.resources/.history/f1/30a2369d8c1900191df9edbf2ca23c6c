@@ -1,0 +1,49 @@
+package Controller;
+
+import java.io.IOException;
+ 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import models.Customer;
+import data.Customers;
+ 
+public class CreateAccount extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
+     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String email = request.getParameter("email");
+		String birthDate = request.getParameter("birthDate");
+		
+		if(firstName.isEmpty() || lastName.isEmpty() || username.isEmpty() || 
+				password.isEmpty() || address.isEmpty() || contact.isEmpty())
+		{
+			RequestDispatcher req = request.getRequestDispatcher("createAccount.jsp");
+			req.include(request, response);
+		}
+		else
+		{
+			Customer c = new Customer();
+			c.setUserName(username);
+			c.setPassword(password);
+			c.setFirstName(firstName);
+			c.setLastName(lastName);
+			c.setEmail(email);
+			c.setBirthDate(birthDate);
+			c.setOnline(true);
+			Customers.addCustomer(c);
+			RequestDispatcher req = request.getRequestDispatcher("Welcome.jsp");
+			req.forward(request, response);
+		}
+	}
+ 
+}

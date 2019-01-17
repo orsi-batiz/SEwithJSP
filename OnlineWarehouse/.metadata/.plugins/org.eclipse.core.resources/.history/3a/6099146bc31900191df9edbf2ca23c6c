@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create account</title>
+</head>
+<body>
+<jsp:include page="header.jsp" />
+
+<form action="createAccountServlet" method="post">
+			<table style="with: 50%">
+				<tr>
+					<td>Username: </td>
+					<td><input type="text" name="username" /></td>
+				</tr>
+				<tr>
+					<td>Password: </td>
+					<td><input type="password" name="password" /></td>
+				</tr>
+				<tr>
+					<td>First name:</td>
+					<td><input type="text" name="firstName" /></td>
+				</tr>
+					<tr>
+					<td>Last name:</td>
+					<td><input type="text" name="lastName" /></td>
+				</tr>
+				<tr>
+					<td>E-mail: </td>
+					<td><input type="text" name="email" /></td>
+				</tr>
+				<tr>
+					<td>Birth date (yyyy-MM-dd): </td>
+					<td><input type="text" name="birthDate" /></td>
+				</tr>
+				</table>
+			<input type="submit" value="Create" /></form>
+
+<jsp:include page="footer.jsp" />
+</body>
+</html>
